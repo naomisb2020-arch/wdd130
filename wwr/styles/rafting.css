@@ -2,7 +2,6 @@
     --primary-color: #0b2545;
     --secondary-color: #134074;
     --accent1-color: #8da9c4;
-    --accent2-color: #eef4f8;
     --text-color: #111111;
     --heading-font: "Georgia", "Times New Roman", serif;
     --body-font: Arial, Helvetica, sans-serif;
@@ -59,7 +58,7 @@ header nav li {
 
 header nav a {
     text-decoration: none;
-    color: #0000ee;
+    color: var(--accent1-color);
     font-size: 0.95rem;
 }
 
@@ -97,7 +96,7 @@ article {
     width: 100%;
     padding: 12px;
     text-align: center;
-    background-color: rgba(11, 37, 69, 0.85);
+    background-color: var(--secondary-color);
     color: #ffffff;
     font-size: 1.8rem;
 }
@@ -107,7 +106,7 @@ article {
     bottom: 20px;
     left: 20px;
     right: 20px;
-    background-color: rgba(11, 37, 69, 0.75);
+    background-color: var(--secondary-color);
     color: #ffffff;
     padding: 16px;
     margin: 0;
