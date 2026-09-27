@@ -9,82 +9,126 @@ body {
     font-family: Roboto, Arial, sans-serif;
 }
 
+/* Navegación Flexbox */
 nav {
     background-color: steelblue;
-    padding: 10px;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
 }
 
 nav a {
-    color: white;
-    padding: 10px;
     display: block;
+    padding: 0.5rem;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #fff;
 }
 
+/* Título principal */
 h1 {
     color: steelblue;
+    border-bottom: 1px solid #000;
+    padding-bottom: 0.3rem;
+    margin-bottom: 1rem;
 }
 
-main {
-    max-width: 840px;
-}
-
+/* Imagen dentro del main (tu foto) */
 main img {
     width: 150px;
     height: auto;
     border: 1px solid steelblue;
     padding: 2px;
-    box-shadow: 0 0 30px gray;
+    box-shadow: 0 0 15px gray;
     float: right;
-    margin: 0rem 0rem 1rem 1rem;
+    margin: 0 0 1rem 1rem;
 }
 
 p {
-    margin: 1rem;
-    padding: 0;
+    margin-bottom: 1rem;
+    line-height: 1.5;
 }
 
+/* Configuración de la tarjeta lateral (Aside) */
 aside {
-    width: 20rem;
-    margin: 1rem;
-    border: 1px solid #000;
-    padding: 1rem;
     background-color: #eee;
     color: #333;
+    padding: 1.5rem;
+    border: 1px solid #000;
     text-align: center;
+    grid-row: 1 / 2;
 }
 
 aside img {
-    width: 200px;
+    width: 100%;
+    max-width: 200px;
     height: auto;
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
 }
 
 aside h2 {
     color: #000;
+    margin-bottom: 0.5rem;
 }
 
+aside ul {
+    text-align: left;
+    padding-left: 1.5rem;
+}
+
+aside li {
+    margin-bottom: 0.5rem;
+}
+
+/* Pie de página */
 footer {
-    margin-top: 1em;
+    margin-top: 2rem;
     border-top: 1px solid #000;
     text-align: center;
+    padding: 1rem 0;
 }
-
-/* Class Selectors */
 
 .box {
-    margin: 1em;
+    margin: 1rem 0;
     border: 1px solid #000;
-    padding: 1em;
+    padding: 1.5rem;
     background-color: #eee;
     color: #000;
-    text-align: center;
 }
 
-.indent {
-    padding-left: 2rem;
+.box {
+    margin: 1rem 0;
+    border: 1px solid #000;
+    padding: 1.5rem;
+    background-color: #eee;
+    color: #000;
 }
 
-ul.box {
-    text-align: left;
-    max-width: 580px;
-    padding-left: 2.5rem;
+/* CONTENEDOR GRID PRINCIPAL (Esto acomoda el aside a la izquierda y el main a la derecha) */
+header,
+.grid,
+footer {
+    max-width: 840px;
+    margin: 0 auto;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 220px 1fr;
+    /* Columna fija para el aside, el resto para el main */
+    gap: 20px;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+    align-items: start;
+}
+
+main {
+    grid-column: 2 / 3;
+}
+
+aside {
+    grid-column: 1 / 2;
 }
