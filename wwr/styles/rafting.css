@@ -27,17 +27,19 @@ footer {
 }
 
 header {
-    padding: 10px 0;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
+    background-color: var(--accent1-color);
+    padding: 3px 15px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    display: grid;
+    grid-template-columns: 150px 1fr;
+    align-items: center;
 }
 
 header img {
     width: 150px;
     height: auto;
     display: block;
-    margin-bottom: 2px;
 }
 
 header nav {
@@ -46,20 +48,22 @@ header nav {
 }
 
 header nav ul {
-    list-style-type: square;
-    padding-left: 18px;
-    margin-top: 0;
-    margin-bottom: 0;
+    list-style-type: none;
+    padding-left: 0;
+    display: flex;
+    justify-content: space-around;
 }
 
 header nav li {
-    margin-bottom: 2px;
+    margin-bottom: 0;
 }
 
 header nav a {
     text-decoration: none;
-    color: var(--accent1-color);
-    font-size: 0.95rem;
+    color: var(--primary-color);
+    /* Mejor contraste según las reglas AA */
+    font-size: 1.1rem;
+    font-weight: bold;
 }
 
 header nav a:hover {
@@ -142,15 +146,69 @@ section p {
     padding: 0 4px;
 }
 
+.history-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+    align-items: center;
+}
+
+.history-grid img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    display: block;
+    justify-self: center;
+    border-radius: 8px;
+}
+
+.history-grid p {
+    line-height: 1.6;
+    text-align: left;
+}
+
+.adventure-gallery {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    padding: 10px 0;
+}
+
+.adventure-gallery figure {
+    margin: 0;
+    flex: 1;
+    text-align: center;
+}
+
+.adventure-gallery img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: block;
+}
+
+.adventure-gallery figcaption {
+    margin-top: 8px;
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
 footer {
     border-top: 1px solid #ccc;
     padding-top: 12px;
     margin-top: 24px;
     margin-bottom: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
 }
 
 footer p {
-    margin: 4px 0;
+    margin: 0;
     padding: 0;
     font-size: 0.85rem;
 }
@@ -158,8 +216,10 @@ footer p {
 .socialmedia {
     display: flex;
     gap: 12px;
-    margin: 8px 0;
+    margin: 0;
     padding: 0;
+    position: absolute;
+    right: 0;
 }
 
 .socialmedia a {
