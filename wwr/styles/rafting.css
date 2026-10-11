@@ -232,7 +232,9 @@ footer p {
     display: block;
 }
 
-/* CONTACT US PAGE */
+/*  =================================
+        CONTACT US MODIFICATIONS
+    ================================= */
 
 .company-info {
     text-align: center;
@@ -396,4 +398,150 @@ footer p {
 
 .employee-profiles figcaption {
     font-weight: 500;
+}
+
+/*  ==============================
+        TRIPS AND HOME MODIFICATIONS
+    ==============================*/
+
+.trips-cta {
+    background-color: var(--secondary-color, #e0f2fe);
+    border: 2px solid var(--primary-color, #0284c7);
+    padding: 30px 20px;
+    text-align: center;
+    border-radius: 8px;
+    margin-bottom: 40px;
+    color: #ffffff
+}
+
+.trips-cta h2 {
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.trips-cta p {
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+}
+
+.cta-button {
+    display: block;
+    width: fit-content;
+    margin: 15px auto;
+    background-color: var(--primary-color, #0284c7);
+    color: #ffffff;
+    padding: 12px 24px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #0369a1;
+}
+
+.trips-grid-section {
+    margin-bottom: 50px;
+}
+
+.trips-grid-section h2 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.trips-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.trip-card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+    display: flex;
+    flex-direction: column;
+    background-color: #ffffff;
+}
+
+.trip-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.trip-card h3 {
+    margin: 15px 15px 10px;
+    color: var(--primary-color, #0284c7);
+}
+
+.trip-card p {
+    padding: 0 15px 20px;
+    line-height: 1.5;
+    color: #333333;
+    flex-grow: 1;
+}
+
+.trips-table-container {
+    margin-bottom: 50px;
+}
+
+.trips-table-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.trips-table-container caption {
+    caption-side: bottom;
+    font-size: 0.85rem;
+    color: #666;
+    margin-top: 10px;
+    text-align: center;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0 auto;
+    background-color: #ffffff;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+th,
+td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: var(--primary-color, #0284c7);
+    color: #ffffff;
+    font-weight: bold;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f8fafc;
+}
+
+tbody tr:hover {
+    background-color: #f1f5f9;
+}
+
+.home-img {
+    display: block;
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    margin-bottom: 20px;
+}
+
+.home-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin-bottom: 50px;
 }
